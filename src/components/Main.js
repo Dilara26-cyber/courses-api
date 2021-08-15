@@ -4,6 +4,7 @@ import { createCategories } from "./Helpers";
 import { useLocation } from "react-router-dom";
 import Categories from "./Categories";
 import List from "./List";
+import Between from "./Between";
 const Main = () => {
   const [data, setData] = useState([]);
   const [sections, setSections] = useState([]);
@@ -39,6 +40,7 @@ const Main = () => {
     <main>
       <Categories categories={categories} />
       <List title={category} courses={courses} />
+     <Between/>
       {sections &&
         sections.map((section, index) => (
           <List title={section.title} courses={section.courses} key={index} />

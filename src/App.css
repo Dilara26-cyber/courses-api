@@ -100,7 +100,7 @@ nav {
   grid-auto-columns: auto;
   gap: 2em;
   overflow-x: auto;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .list-heading {
   color: var(--darkColor);
@@ -142,6 +142,28 @@ nav {
 .list-section::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: var(--darkGray);
+}
+
+/*Between Section*/
+.between{
+  background: rgb(153,117,208);
+background: linear-gradient(207deg, rgba(153,117,208,1) 7%, rgba(74,63,219,1) 85%);
+margin-top: 2em;
+}
+.between-section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 40vh;
+  color: var(--gray);
+}
+.between-section img{
+  position: absolute;
+  right: 10%;
+}
+.between-section h1{
+  font-weight: 500;
+  font-size: 3rem;
 }
 @media (min-width: 768px) {
   .nav-section,
