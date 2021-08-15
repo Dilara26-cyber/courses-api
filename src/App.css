@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root{
+  --mainColor: #ff6012;
+  --lightOrange: #eccdb1;
+}
 /*Global Styling*/
 *,
 *::before,
@@ -22,7 +27,7 @@ a {
 /*Navbar*/
 nav {
   width: 100%;
-  background-color: #ff6012;
+  background-color: var(--mainColor);
   padding: 1em 0;
 }
 .logo {
@@ -40,7 +45,7 @@ nav {
   width: 275px;
   border: none;
   border-radius: 20px;
-  background-color: #eccdb1;
+  background-color: var(--lightOrange);
 }
 .searchBox label,
 .searchBox img {
