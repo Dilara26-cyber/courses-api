@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { createCategories } from "./Helpers";
+import Categories from "./Categories";
 const Main = () => {
   const [course, setCourse] = useState([]);
   const fetchData = async () => {
@@ -16,9 +17,9 @@ const Main = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  const category = createCategories(course);
+  const categories = createCategories(course);
 
-  return <div>{console.log(category)}</div>;
+  return <main><Categories categories={categories}/></main>;
 };
 
 export default Main;
