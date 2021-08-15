@@ -3,18 +3,20 @@ import axios from "axios";
 import { createCategories } from "./Helpers";
 import { useLocation } from "react-router-dom";
 import Categories from "./Categories";
+import List from "./List";
 const Main = () => {
-  const [course, setCourse] = useState([]);
+  const [data, setData] = useState([]);
+  const [courses, setCourses] = useState([])
   const { pathname } = useLocation();
   const [category, setCategory] = useState(
     pathname === "/How to" ? "How to?" : pathname.replace("/", "")
   );
   useEffect(() => {
     setCategory(pathname === "/How to" ? "How to?" : pathname.replace("/", ""));
-    console.log(
-      course.filter((c) => c.category.includes(category))
+    setCourses(
+      data.filter((item) => item.category.includes(category))
     );
-  }, [pathname]);
+  }, [pathname, category, data]);
   const fetchData = async () => {
     const response = await axios.get(`/academy/get`);
     const {
@@ -22,9 +24,9 @@ const Main = () => {
         data: { courses },
       },
     } = response;
-    setCourse(courses);
+    setData(courses);
   };
-  const categories = createCategories(course);
+  const categories = createCategories(data);
   useEffect(() => {
     fetchData();
   }, []);
@@ -32,6 +34,7 @@ const Main = () => {
   return (
     <main>
       <Categories categories={categories} />
+      <List courses={courses}/>
     </main>
   );
 };

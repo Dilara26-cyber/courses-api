@@ -1,10 +1,11 @@
+import Course from "./Course"
 
-const List = () => {
+const List = ({courses}) => {
    
     return (
-        <div>
-    
-        </div>
+        <section className="list-section">
+    {courses.map((course) => <Course course={course}/>)}
+        </section>
     )
 }
 
