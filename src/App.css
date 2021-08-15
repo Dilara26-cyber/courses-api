@@ -26,6 +26,7 @@ section {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 
 /*Navbar*/
@@ -87,7 +88,10 @@ nav {
   14px 10px 0 0px #E5E5E5,
   10px 10px 0 0px #E5E5E5;
 }
-
+.active{
+  background-color: var(--darkColor);
+  color: white;
+}
 
 @media (min-width: 768px) {
   .nav-section, .card-container {
