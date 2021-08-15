@@ -165,9 +165,18 @@ margin-top: 2em;
   font-weight: 500;
   font-size: 3rem;
 }
+footer{
+  background-color: var(--mainColor);
+}
+footer section{
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  color: var(--lightOrange);
+}
 @media (min-width: 768px) {
   .nav-section,
-  .card-container {
+  .card-container, footer section {
     display: flex;
     justify-content: space-between;
     gap: 1em;

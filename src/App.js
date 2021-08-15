@@ -3,6 +3,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 function App() {
   const history = useHistory();
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
           <div>Hi</div>
         </Route>
       </Switch>
+      <Footer/>
     </div>
   );
 }
