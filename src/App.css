@@ -3,6 +3,10 @@
 :root{
   --mainColor: #ff6012;
   --lightOrange: #eccdb1;
+  --darkColor: rgba(24,24,24,0.75);
+  --darkBlue: #4A3FDB;
+  --purple: #9975D0;
+  --gray: #F4F4FC;
 }
 /*Global Styling*/
 *,
