@@ -7,6 +7,7 @@
   --darkBlue: #4a3fdb;
   --purple: #9975d0;
   --gray: #f4f4fc;
+  --darkGray: #e5e5e5;
 }
 /*Global Styling*/
 *,
@@ -79,7 +80,8 @@ nav {
   justify-content: space-between;
   padding: 0.5em;
   border-radius: 10px;
-  margin-bottom: 1em;
+  margin: 1em 0;
+  width: 100%;
 }
 .active {
   background-color: var(--darkColor);
@@ -87,27 +89,69 @@ nav {
 }
 .category-card,
 .course-card {
-  border: 2px solid var(--darkColor);
-  box-shadow: 12px 8px 0 0px white, 14px 6px 0 0px #e5e5e5,
-    14px 10px 0 0px #e5e5e5, 10px 10px 0 0px #e5e5e5;
-  margin-top: 1em;
-  width: 100%;
+  border: 1px solid var(--darkColor);
+  box-shadow: 12px 8px 0 0px white, 14px 6px 0 0px var(--darkGray),
+    14px 10px 0 0px var(--darkGray), 10px 10px 0 0px var(--darkGray);
+ 
 }
+.list-section {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  gap: 2em;
+  overflow-x: auto;
+  justify-content: flex-start;
+}
+.list-heading {
+  color: var(--darkColor);
+  font-size: 20px;
+  letter-spacing: 1px;
+  width: 90%;
+  max-width: 1280px;
+  margin: 1em auto;
+}
+.list-section::before{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 90%;
+  max-width: 1280px;
+  background-color: var(--mainColor);
+  position: absolute;
+}
+.course-card {
+  text-align: center;
+  width: 275px;
+  margin: 2em 0;
+}
+
 .course-card img {
   width: 100%;
 }
+.list-section::-webkit-scrollbar {
+  height: 10px;
+  width: 5px;
+  cursor: pointer;
+}
 
+.list-section::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.list-section::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--darkGray);
+}
 @media (min-width: 768px) {
   .nav-section,
-  .card-container, .list-section {
+  .card-container {
     display: flex;
     justify-content: space-between;
     gap: 1em;
   }
-  .list-section{
-    justify-content: center;
-  }
-  .category-card, .course-card {
+
+  .category-card {
     max-width: 225px;
   }
 }

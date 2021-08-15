@@ -1,12 +1,17 @@
-import Course from "./Course"
+import { Link } from "react-router-dom";
+import Course from "./Course";
 
-const List = ({courses}) => {
-   
-    return (
-        <section className="list-section">
-    {courses.map((course) => <Course course={course}/>)}
-        </section>
-    )
-}
+const List = ({ courses, title }) => {
+  return (
+    <>
+      {title && <h1 className="list-heading">{title}</h1>}
+      <section className="list-section">
+        {courses.map((course) => (
+         <Link to={`/course/${course.id}`} key={course.id}><Course course={course} /></Link> 
+        ))}
+      </section>
+    </>
+  );
+};
 
-export default List
+export default List;
