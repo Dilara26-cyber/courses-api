@@ -32,8 +32,10 @@ const Main = () => {
   };
   const categories = createCategories(data);
   useEffect(() => {
+    const abortCont = new AbortController()
     fetchData();
     fetchForSections();
+    return () => abortCont.abort()
   }, []);
 
   return (

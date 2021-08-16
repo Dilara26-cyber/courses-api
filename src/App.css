@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+/*Variables*/
 :root {
   --mainColor: #ff6012;
   --lightOrange: #eccdb1;
@@ -92,8 +92,8 @@ nav {
   border: 1px solid var(--darkColor);
   box-shadow: 12px 8px 0 0px white, 14px 6px 0 0px var(--darkGray),
     14px 10px 0 0px var(--darkGray), 10px 10px 0 0px var(--darkGray);
- 
 }
+/*Data Listing*/
 .list-section {
   display: grid;
   grid-auto-flow: column;
@@ -110,7 +110,7 @@ nav {
   max-width: 1280px;
   margin: 1em auto;
 }
-.list-section::before{
+.list-section::before {
   content: "";
   display: block;
   height: 1px;
@@ -124,51 +124,54 @@ nav {
   width: 275px;
   margin: 2em 0;
 }
-
 .course-card img {
   width: 100%;
 }
+/*Scrollbar*/
 .list-section::-webkit-scrollbar {
   height: 10px;
   width: 5px;
   cursor: pointer;
 }
-
 .list-section::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 10px;
 }
-
 .list-section::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: var(--darkGray);
 }
 
 /*Between Section*/
-.between{
-  background: rgb(153,117,208);
-background: linear-gradient(207deg, rgba(153,117,208,1) 7%, rgba(74,63,219,1) 85%);
-margin-top: 2em;
+.between {
+  background: rgb(153, 117, 208);
+  background: linear-gradient(
+    207deg,
+    rgba(153, 117, 208, 1) 7%,
+    rgba(74, 63, 219, 1) 85%
+  );
+  margin-top: 2em;
 }
-.between-section{
+.between-section {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 40vh;
   color: var(--gray);
 }
-.between-section img{
+.between-section img {
   position: absolute;
   right: 10%;
 }
-.between-section h1{
+.between-section h1 {
   font-weight: 500;
   font-size: 3rem;
 }
-footer{
+/*Footer*/
+footer {
   background-color: var(--mainColor);
 }
-footer section{
+footer section {
   display: flex;
   height: 10vh;
   align-items: center;
@@ -176,12 +179,12 @@ footer section{
 }
 @media (min-width: 768px) {
   .nav-section,
-  .card-container, footer section {
+  .card-container,
+  footer section {
     display: flex;
     justify-content: space-between;
     gap: 1em;
   }
-
   .category-card {
     max-width: 225px;
   }

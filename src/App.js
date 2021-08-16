@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import CourseDetails from "./components/CourseDetails";
 function App() {
   const history = useHistory();
   useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
           <Main />
         </Route>
         <Route exact path="/course/:id">
-          <div>Hi</div>
+          <CourseDetails/>
         </Route>
       </Switch>
       <Footer/>
