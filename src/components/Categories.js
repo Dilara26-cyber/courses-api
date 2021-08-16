@@ -5,6 +5,7 @@ const Categories = ({ categories }) => {
       {categories.map((tag, index) => {
         const [text, value] = tag;
         return (
+          /* Used NavLink to benefit from params and active state */
           <NavLink
             key={index}
             to={text}

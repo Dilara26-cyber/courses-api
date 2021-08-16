@@ -6,6 +6,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import CourseDetails from "./components/CourseDetails";
 function App() {
+  //Direct routing to a category when page loads or component mounts
   const history = useHistory();
   useEffect(() => {
     history.push("/Mountaineering");

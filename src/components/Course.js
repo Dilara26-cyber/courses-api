@@ -1,12 +1,11 @@
+const Course = ({ course }) => {
+  return (
+    <div className="course-card">
+      {/* Create a course card for re-using */}
+      <img src={course.thumbnailImageURL} alt={course.title} />
+      <p>{course.title}</p>
+    </div>
+  );
+};
 
-const Course = ({course}) => {
-    
-    return (
-        <div className="course-card">
-           <img src={course.thumbnailImageURL} alt={course.title}/>
-           <p>{course.title}</p>
-        </div>
-    )
-}
-
-export default Course
+export default Course;

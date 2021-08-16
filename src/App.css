@@ -127,6 +127,9 @@ nav {
 .course-card img {
   width: 100%;
 }
+.list-section a:hover{
+  
+}
 /*Scrollbar*/
 .list-section::-webkit-scrollbar {
   height: 10px;
@@ -165,11 +168,12 @@ nav {
 }
 .between-section h1 {
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 /*Footer*/
 footer {
   background-color: var(--mainColor);
+  margin-top: 2em;
 }
 footer section {
   display: flex;
